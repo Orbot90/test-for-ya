@@ -21,8 +21,8 @@ public class RTriangleImpl implements RTriangle {
         this.apexY3 = apexY3;
     }
 
-    public static RTrianbleBuilder builder() {
-        return new RTrianbleBuilder();
+    public static RTriangleBuilder builder() {
+        return new RTriangleBuilder();
     }
 
     public int getApexX1() {
@@ -53,7 +53,7 @@ public class RTriangleImpl implements RTriangle {
 /**
  * Билдер для треугольника
  */
-class RTrianbleBuilder {
+class RTriangleBuilder {
     private int apexX1;
     private int apexY1;
     private int apexX2;
@@ -61,32 +61,32 @@ class RTrianbleBuilder {
     private int apexX3;
     private int apexY3;
 
-    public RTrianbleBuilder apexX1(int apexX1) {
+    public RTriangleBuilder apexX1(int apexX1) {
         this.apexX1 = apexX1;
         return this;
     }
 
-    public RTrianbleBuilder apexY1(int apexY1) {
+    public RTriangleBuilder apexY1(int apexY1) {
         this.apexY1 = apexY1;
         return this;
     }
 
-    public RTrianbleBuilder apexX2(int apexX2) {
+    public RTriangleBuilder apexX2(int apexX2) {
         this.apexX2 = apexX2;
         return this;
     }
 
-    public RTrianbleBuilder apexY2(int apexY2) {
+    public RTriangleBuilder apexY2(int apexY2) {
         this.apexY2 = apexY2;
         return this;
     }
 
-    public RTrianbleBuilder apexX3(int apexX3) {
+    public RTriangleBuilder apexX3(int apexX3) {
         this.apexX3 = apexX3;
         return this;
     }
 
-    public RTrianbleBuilder apexY3(int apexY3) {
+    public RTriangleBuilder apexY3(int apexY3) {
         this.apexY3 = apexY3;
         return this;
     }
