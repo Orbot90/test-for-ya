@@ -3,10 +3,10 @@ package ru.orbot90;
 /**
  * Класс, возвращающий прямоугольный треугольник
  */
-public class RTriangleProvider {
+public class RtriangleProvider {
 
-    public static RTriangle getRTriangle() {
-        return RTriangleImpl.builder()
+    public static Rtriangle getRTriangle() {
+        return RtriangleImpl.builder()
                 .apexX1(3)
                 .apexY1(4)
                 .apexX2(5)

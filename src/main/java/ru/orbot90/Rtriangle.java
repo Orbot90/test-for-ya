@@ -3,7 +3,7 @@ package ru.orbot90;
 /**
  * Интерфейс для immutable треугольника
  */
-public interface RTriangle {
+public interface Rtriangle {
     int getApexX1();
     int getApexY1();
     int getApexX2();

@@ -8,22 +8,22 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Тест, проверяющий, что RTriangleProvider возвращает прямоугольный треугольник
+ * Тест, проверяющий, что RtriangleProvider возвращает прямоугольный треугольник
  *
  * testShouldReturnTriangle - проверяет, что полученные три точки образуют треугольник
  * testShouldReturnRTriangle - проверяет, что треугольник является прямоугольным
  */
-public class RTriangleProviderTest {
+public class RtriangleProviderTest {
 
     @Test
     public void testShouldReturnTriangle() {
-        RTriangle triangle = RTriangleProvider.getRTriangle();
+        Rtriangle triangle = RtriangleProvider.getRTriangle();
         Assert.assertFalse("Apexes should not lay on same line", isOnSameLine(triangle));
     }
 
     @Test
     public void testShouldReturnRTriangle() {
-        RTriangle triangle = RTriangleProvider.getRTriangle();
+        Rtriangle triangle = RtriangleProvider.getRTriangle();
 
         List<Double> sortedSizes = getSortedSizes(triangle);
         double firstCathetus = sortedSizes.get(1);
@@ -35,14 +35,14 @@ public class RTriangleProviderTest {
 
     }
 
-    private boolean isOnSameLine(RTriangle triangle) {
+    private boolean isOnSameLine(Rtriangle triangle) {
         int xArg = triangle.getApexY2() - triangle.getApexY1();
         int yArg = triangle.getApexX1() - triangle.getApexX2();
         int freeArg = triangle.getApexX2() * triangle.getApexY1() - triangle.getApexX1() * triangle.getApexY2();
         return  (xArg * triangle.getApexX3() + yArg * triangle.getApexY3() + freeArg) == 0;
     }
 
-    private List<Double> getSortedSizes(RTriangle triangle) {
+    private List<Double> getSortedSizes(Rtriangle triangle) {
         List<Double> sizes = new ArrayList<>();
         sizes.add(
                 getSideLength(triangle.getApexX1(), triangle.getApexY1(),
